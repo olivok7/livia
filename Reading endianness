@@ -1,0 +1,12 @@
+
+Prešla som si súbor /challenge/cimg.
+
+Zaujalo ma, že obsahoval hexadecimálny kód.
+Keď som ho vložila do ASCII prevodníka, objavilo sa slovo „little“.
+
+To mi napovedalo, že ide o zápis v little-endian formáte,
+preto som poradie bajtov obrátila.
+
+Po tejto zmene všetko fungovalo správne
+a úlohu *reading endianness* na pwn.college sa mi podarilo úspešne dokončiť.
+
