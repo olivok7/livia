@@ -1,0 +1,19 @@
+
+
+#!/bin/python
+
+
+# Celkový počet pixelov = width * height
+# Takže: width * height = 275
+# Faktorizácia: 275 = 25 * 11 (rozumný pomer strán)
+# 275 = 5 * 5 * 11, takže môžeme použiť 25 (5*5) a 11
+
+with open("example.cimg", "wb") as file:
+    file.write(b"cIMG")  
+    file.write((1).to_bytes(8, "little"))  
+    
+    width = 25
+    height = 11
+    file.write(width.to_bytes(2, "little"))  
+    file.write(height.to_bytes(2, "little"))  
+    file.write((width * height) * b"X")
