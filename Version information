@@ -1,0 +1,7 @@
+#!/bin/python
+
+with open("example.cimg", "wb") as file:
+    header_magic = b"CONR"
+    version = (95).to_bytes(4, "little")
+    file.write(header_magic + version)
+    file.write(b"\x00" * 100)
